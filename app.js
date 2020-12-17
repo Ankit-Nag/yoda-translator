@@ -18,7 +18,7 @@ function errorHandler(error){
 function clickEventHandler() {
     fetch(getTranslationURL(inputText.value))
     .then(response => response.json())
-    .then(json => console.log(json))
+    .then(json => {outputText.innerText=json.contents.translated})
     .catch(errorHandler)
 }
 
